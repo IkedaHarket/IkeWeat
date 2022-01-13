@@ -5,15 +5,15 @@ import { imageSelectorWeather } from '../../helpers/imageSelectorWeather';
 const SimpleCard = ({weather}) => {
 
     const nameDayOfWeek = ()=>{
-        const fechaComoCadena = weather.dt_txt; // día lunes
+        const fechaComoCadena = weather.dt_txt; 
         const dias = [
-        'Domingo',
-        'Lunes',
-        'Martes',
-        'Miércoles',
-        'Jueves',
-        'Viernes',
-        'Sábado',
+            'Domingo',
+            'Lunes',
+            'Martes',
+            'Miércoles',
+            'Jueves',
+            'Viernes',
+            'Sábado',
         ];
         const numeroDia = new Date(fechaComoCadena).getDay();
         return dias[numeroDia];

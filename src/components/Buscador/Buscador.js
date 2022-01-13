@@ -34,10 +34,12 @@ const Buscador = ({setWeatherDay,setWeatherWeek}) => {
     useEffect(() => {
 
         const getDataPais= async()=>{
-            const resp = await fetch('http://ip-api.com/json');
-            const pais = await resp.json();
-            await getWeatherDay(pais.city)
-            await getWeatherWeek(pais.city)
+            // const resp = await fetch('http://ip-api.com/json');
+            // const pais = await resp.json();
+            // await getWeatherDay(pais.city)
+            // await getWeatherWeek(pais.city)
+            await getWeatherDay('chile')
+            await getWeatherWeek('chile')
         }
         getDataPais();
         
