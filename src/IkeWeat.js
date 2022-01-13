@@ -28,13 +28,7 @@ const IkeWeat = () => {
             <div className="p-col">
                 <div className='p-grid p-justify-center	'>
                 {
-                    weatherWeek?.list?.map((weather,i) => (   i+1 == 8 ||
-                                                            i+1 == 16 ||
-                                                            i+1 == 24 ||
-                                                            i+1 == 32 ||
-                                                            i+1 == 40 
-                                                        )
-                          &&<SimpleCard key={i} weather={weather}/> )
+                    weatherWeek?.list?.map((weather,index) => ( index % 8 === 0) &&<SimpleCard key={index} weather={weather}/> )
                 }
                 </div>
             </div>
